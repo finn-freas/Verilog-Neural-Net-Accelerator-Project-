@@ -6,7 +6,7 @@ module mlp_ctrl #(
     input  logic               clk,
     input  logic               rst_n,
     input  logic               start,
-    input  logic signed [31:0] acc,      // from MAC
+    input  logic signed [31:0] acc,      // from multiply-acumulate
 
     output logic               busy,
     output logic               done,     // 1 cyc pulse
@@ -29,7 +29,7 @@ module mlp_ctrl #(
   logic signed [31:0] best_val;   // take the max
     logic [3:0]         best_idx;
 
-    // moore outputs
+    // more outputs
     assign busy    = (state != IDLE);
     assign mac_clr = (state == L1_INIT) || (state == L2_INIT);
     assign mac_en  = (state == L1_MAC)  || (state == L2_MAC);
