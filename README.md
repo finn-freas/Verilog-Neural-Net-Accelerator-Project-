@@ -8,4 +8,4 @@ I have built:
 
 
 
-Currently working on training a model so I can use its weights for testing.
+Currently working on training a model so I can use its weights for testing and teaching myself how to write testbenches.
